@@ -1,0 +1,4 @@
+A modified version of the classify-20newsgroups.sh script from the Mahout distribution
+Changes: 
+1. allow complement bayes instead of standard naive bayes
+2. allow determining the ngram size 
