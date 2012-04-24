@@ -56,12 +56,14 @@ fi
 echo "ok. You chose $choice and we'll use ${algorithm[$choice-1]}"
 alg=${algorithm[$choice-1]}
 
-# Rani: add ngram
-echo "Please select an ngram size"
-read -p "Enter your ngram size (1 or 2): " ngram
-echo "ok. You chose ngram=$ngram"
-if [ $ngram > 2 ]; then 
-	echo "Warning: setting ngram above 2 will be sloooowwww"
+if [ $choice -ne 4 ]; then 
+	# Rani: add ngram
+	echo "Please select an ngram size"
+	read -p "Enter your ngram size (1 or 2): " ngram
+	echo "ok. You chose ngram=$ngram"
+	if [ $ngram -gt 2 ]; then 
+		echo "Warning: setting ngram above 2 will be sloooowwww"
+	fi
 fi
 
 echo "creating work directory at ${WORK_DIR}"
